@@ -15,56 +15,51 @@ export default function Navbar() {
     const homeSection = document.querySelector("#home");
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if(entry.isIntersecting) {
-          setFroceVisible(true)
-          setVisible(true)
-        }else {
-          setFroceVisible(false)
+        if (entry.isIntersecting) {
+          setFroceVisible(true);
+          setVisible(true);
+        } else {
+          setFroceVisible(false);
         }
-        
-      },{threshold: 0.1}
-
-    )
+      },
+      { threshold: 0.1 },
+    );
 
     if (homeSection) observer.observe(homeSection);
 
     return () => {
-      if(homeSection) observer.unobserve(homeSection)
-    }
-      
+      if (homeSection) observer.unobserve(homeSection);
+    };
   }, []);
-
 
   useEffect(() => {
     const handleScroll = () => {
-      if(forceVisible){
-        setFroceVisible(true)
-        return
+      if (forceVisible) {
+        setFroceVisible(true);
+        return;
       }
 
       const currentScrollY = window.scrolly;
-      if(currentScrollY > lastScrollY.current) {
-        setVisible(false)
-      }else {
-        setVisible(true)
-        if(timerId.current) clearTimeout(timerId.current)
-          timerId.current = setTimeout(() => {
-            setVisible(false)
-          }, 3000);
+      if (currentScrollY > lastScrollY.current) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+        if (timerId.current) clearTimeout(timerId.current);
+        timerId.current = setTimeout(() => {
+          setVisible(false);
+        }, 3000);
       }
 
-      lastScrollY.current = currentScrollY
+      lastScrollY.current = currentScrollY;
+    };
 
-    }
-
-    window.addEventListener("scroll" , handleScroll , {passive:true})
-
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll" , handleScroll)
-      if(timerId.current) clearTimeout(timerId.current)
-    }
-  }, [forceVisible])
+      window.removeEventListener("scroll", handleScroll);
+      if (timerId.current) clearTimeout(timerId.current);
+    };
+  }, [forceVisible]);
 
   return (
     <>
@@ -72,20 +67,20 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}
       >
         <div className="flex items-center space-x-2">
-  <img src={logo} alt="logo" className="w-8 h-8" />
-  <div className="text-2xl font-bold text-white hidden sm:block">
-    Fazal
-  </div>
-</div>
+          <img src={logo} alt="logo" className="w-8 h-8" />
+          <div className="text-2xl font-bold text-white hidden sm:block">
+            Fazal
+          </div>
+        </div>
 
-<div className="block lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-  <button
-    onClick={() => setMenuOpen(true)}
-    className="text-white text-3xl cursor-pointer"
-  >
-    <FiMenu />
-  </button>
-</div>
+        <div className="block lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="text-white text-3xl cursor-pointer"
+          >
+            <FiMenu />
+          </button>
+        </div>
 
         <div className="hidden lg:block">
           <a

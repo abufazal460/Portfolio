@@ -32,7 +32,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
               "About",
               "Skill",
               "Projects",
-              "Experence",
+              "Experience",
               "Testimonials",
               "Contact",
             ].map((item, index) => (
