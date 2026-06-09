@@ -13,12 +13,12 @@ import Testimonials from "./sections/Testimonials"
 import IntroAnimation from "./components/IntroAnimation"
 const App = () => {
 
-  const [introDone , setIndroDone] = useState(false)
+  // const [introDone , setIndroDone] = useState(false)
 
   return (
     <>
-    {!introDone && <IntroAnimation onFinish={() => setIndroDone(true)} />}
-    {introDone && (
+    {/* {!introDone && <IntroAnimation onFinish={() => setIndroDone(true)} />} */}
+    {/* {introDone && ( */}
     <div className="relative gradients text-white">
       <CustomCursor />
 
@@ -32,7 +32,7 @@ const App = () => {
       <Contact />
       <Footer />
     </div>
-    )}
+    {/* )} */}
     </>
   )
 }

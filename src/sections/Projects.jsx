@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import img1 from "../assets/img1.JPG";
-import img2 from "../assets/img2.JPG";
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.JPG";
-import photo1 from "../assets/photo1.JPG";
-import photo2 from "../assets/photo2.PNG";
+import photo1 from "../assets/photo1.png";
+import photo2 from "../assets/photo2.png";
 import photo3 from "../assets/photo3.png";
 import {
   motion,
@@ -36,15 +36,15 @@ export default function Projects() {
   const projects = useMemo(
     () => [
       {
-        title: "nk studio",
-        link: "https://www.nk.studio/",
-        bgColor: "#0d4d3d",
+        title: "Restaurant",
+        link: "https://restaurantfazalproject.vercel.app/",
+        bgColor: "#AF363B",
         image: isMobile ? photo1 : img1,
       },
       {
-        title: "Gamily",
-        link: "https://gamilyapp.com/",
-        bgColor: "#3884d3",
+        title: "Jamia Academy",
+        link: "https://jamiaacademy.netlify.app/",
+        bgColor: "#0f172a",
         image: isMobile ? photo2 : img2,
       },
       {
@@ -140,7 +140,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover drop-shadow-xl md:drop-shadow-2xl"
+                  className="w-full h-full object-fill drop-shadow-xl md:drop-shadow-2xl"
                   style={{
                     position: "relative",
                     zIndex: 10,

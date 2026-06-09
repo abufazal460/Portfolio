@@ -4,23 +4,24 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const experiences = [
   {
     role: "Web Developer",
-    company: "Brain Mentors",
-    duration: "2022",
+    company: "Jamia Academy",
+    duration: "2026",
     description:
-      "Built high-performance apps, integrated AI features, improved engagement by 10%.",
+      "I have 6 months of teaching experience at Jamia Academy, where I taught web development and computer fundamentals to 5 students. During this time, I helped students build a strong foundation in programming concepts and practical development skills.",
   },
   {
-    role: "Web Developer Intern",
-    company: "Mobisoft Technologies",
-    duration: "2022 - 2023",
-    description: "Gained hands-on web development experience.",
+    role: "Personal Projects",
+    company: "Self",
+    duration: "6+ build project",
+    description: "Built responsive web applications and personal projects, Skilled in modern frontend and full-stack development technologies.",
   },
   {
-    role: "Graduate Engineer",
-    company: "HCL Technologies",
-    duration: "2024 - 2025",
+    role: "Full Stack",
+    company: "Jamia Academy",
+    duration: "1+ months",
     description:
-      "Built frontend of GenAI-powered PV Intake App with Next.js & TS for US client.",
+      `eveloped a high-performance, fully responsive institute website featuring smooth scrolling, modern animations, and an optimized user experience. Focused on performance, responsiveness, and clean, maintainable code and  here is link https://www.jamiaacademy.in/`,
+        
   },
 ];
 

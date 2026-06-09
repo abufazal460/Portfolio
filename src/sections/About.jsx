@@ -3,9 +3,9 @@ import boy from "../assets/boy.jpg";
 
 export default function About() {
   const stats = [
-    { label: "Expreience", value: "1+ years" },
+    { label: "Expreience", value: "0 years" },
     { label: "speciality", value: "Full Stack" },
-    { label: "focus", value: "Performance & UX" },
+    { label: "focus", value: "Full Stack Modern UI" },
   ];
 
   const glows = [
@@ -55,8 +55,8 @@ export default function About() {
 
             <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
               I build scalable, modern applications with a strong focus on clean
-              architecture, delightful UX, and performance. My toolkit spans
-              Java, React, Next.js, TypeScript, Tailwind CSS, and
+              architecture, delightful UX, and performance. My toolkit Framer Motion,
+              Gsap, React, Next.js, Tailwind CSS, and , Node.js, Express.js Socket.io,
               FastAPI—bringing ideas to life from concept to production with
               robust APIs and smooth interfaces.
             </p>
@@ -108,9 +108,8 @@ export default function About() {
           <p
           className="text-gray-300 leading-relaxed text-base sm:text-lg"
           >
-            I’m a Software Developer, Content Creator, and Web Developer —
-            passionate about building fast, resilient applications and sharing
-            coding insights on Instagram and YouTube.
+            I’m a Software Developer, and Web Developer —
+            passionate about building fast, resilient applications and Modern Animated Web Application with High Performance.
           </p>
           <p 
           className="mt-4 text-gray-400 text-base sm:text-lg"
