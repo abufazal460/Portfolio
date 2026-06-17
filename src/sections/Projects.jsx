@@ -159,13 +159,13 @@ export default function Projects() {
 
           <div
           className={`absolute  ${
-            isMobile ? "bottom-20" : "bottom-10"
+            isMobile ? "bottom-10" : "bottom-5"
           }`}
           >
             <a href={activeProject?.link}
             target="_blank"
             rel="noopener noreferre"
-            className="inline-block px-6 py-3 font-semibold rounded-lg bg-white text-black hover:bg-gray-200 cursor-pointer transition-all"
+            className="inline-block px-6 py-3  font-semibold rounded-lg bg-white text-black hover:bg-gray-200 cursor-pointer transition-all"
             aria-label={`View ${activeProject}`}
             >View Projects</a>
           </div>
