@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
-import img3 from "../assets/img3.JPG";
+import img3 from "../assets/img3.png";
 import photo1 from "../assets/photo1.png";
 import photo2 from "../assets/photo2.png";
 import photo3 from "../assets/photo3.png";
@@ -48,9 +48,9 @@ export default function Projects() {
         image: isMobile ? photo2 : img2,
       },
       {
-        title: "Hungry Tiger",
-        link: "https://www.eathungrytiger.com/",
-        bgColor: "#dc9317",
+        title: "3D Dog Studio",
+        link: "https://first-3d-project-eight.vercel.app/",
+        bgColor: "#040910",
         image: isMobile ? photo3 : img3,
       },
     ],
