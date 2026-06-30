@@ -19,9 +19,11 @@ const experiences = [
     role: "Full Stack",
     company: "Jamia Academy",
     duration: "1+ months",
-    description:
-      `eveloped a high-performance, fully responsive institute website featuring smooth scrolling, modern animations, and an optimized user experience. Focused on performance, responsiveness, and clean, maintainable code and  here is link https://www.jamiaacademy.in/`,
-        
+    description: (
+      <>
+      eveloped a high-performance, fully responsive institute website featuring smooth scrolling, modern animations, and an optimized user experience. Focused on performance, responsiveness, and clean, maintainable code and  here is link <a target="_blank" rel="noopener noreferrer" href="https://www.jamiaacademy.in/" className="text-blue-500 underline">https://www.jamiaacademy.in</a>
+      </>
+        )
   },
 ];
 
