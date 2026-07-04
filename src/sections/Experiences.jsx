@@ -13,7 +13,8 @@ const experiences = [
     role: "Personal Projects",
     company: "Self",
     duration: "6+ build project",
-    description: "Built responsive web applications and personal projects, Skilled in modern frontend and full-stack development technologies.",
+    description:
+      "Built responsive web applications and personal projects, Skilled in modern frontend and full-stack development technologies.",
   },
   {
     role: "Full Stack",
@@ -21,9 +22,20 @@ const experiences = [
     duration: "1+ months",
     description: (
       <>
-      eveloped a high-performance, fully responsive institute website featuring smooth scrolling, modern animations, and an optimized user experience. Focused on performance, responsiveness, and clean, maintainable code and  here is link <a target="_blank" rel="noopener noreferrer" href="https://www.jamiaacademy.in/" className="text-blue-500 underline">https://www.jamiaacademy.in</a>
+        eveloped a high-performance, fully responsive institute website
+        featuring smooth scrolling, modern animations, and an optimized user
+        experience. Focused on performance, responsiveness, and clean,
+        maintainable code and here is link{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.jamiaacademy.in/"
+          className="text-blue-500 underline"
+        >
+          https://www.jamiaacademy.in
+        </a>
       </>
-        )
+    ),
   },
 ];
 
@@ -35,7 +47,7 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
   const y = useTransform(
     scrollYProgress,
     [start, end],
-    [idx % 2 === 0 ? 30 : -30, 0]
+    [idx % 2 === 0 ? 30 : -30, 0],
   );
 
   // ✅ Mobile ke liye x animation
@@ -58,13 +70,17 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
             className={`absolute left-1/2 -translate-x-1/2 ${
               idx % 2 === 0 ? "bottom-12" : "top-12"
             } bg-gray-900/80 backdrop-blur border border-gray-700/70 rounded-xl p-7 w-[320px] shadow-lg`}
-            style={{ opacity, y }}  
+            style={{ opacity, y }}
           >
             <h3 className="text-xl font-semibold">{exp.role}</h3>
-            <p className="text-base text-gray-400 mb-3"> {/* ✅ text-base */}
+            <p className="text-base text-gray-400 mb-3">
+              {" "}
+              {/* ✅ text-base */}
               {exp.company} | {exp.duration}
             </p>
-            <p className="text-base text-gray-300 break-words"> {/* ✅ break-words */}
+            <p className="text-base text-gray-300 break-words">
+              {" "}
+              {/* ✅ break-words */}
               {exp.description}
             </p>
           </motion.article>
@@ -83,7 +99,7 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
 
       <motion.article
         className="bg-gray-900/80 backdrop-blur border border-gray-700/70 rounded-xl p-5 w-[90vw] max-w-sm ml-6 shadow-lg"
-        style={{ opacity, x }}  // ✅ x use kiya mobile mein
+        style={{ opacity, x }} // ✅ x use kiya mobile mein
       >
         <h3 className="text-lg font-semibold break-words">{exp.role}</h3>
         <p className="text-sm text-gray-400 mb-2 break-words">
@@ -118,7 +134,7 @@ export default function Experiences() {
   // ✅ experiences dependency add kiya
   const thresholds = useMemo(
     () => experiences.map((_, i) => (i + 1) / experiences.length),
-    [experiences]
+    [experiences],
   );
 
   const lineSize = useTransform(scrollYProgress, (v) => `${v * 100}%`);
@@ -136,7 +152,6 @@ export default function Experiences() {
           </h2>
 
           <div className="flex flex-1 items-center justify-center px-6 pb-10">
-
             {/* ✅ DESKTOP */}
             {!isMobile && (
               <div className="relative w-full max-w-7xl ">
@@ -156,7 +171,7 @@ export default function Experiences() {
                       start={idx === 0 ? 0 : thresholds[idx - 1]}
                       end={thresholds[idx]}
                       scrollYProgress={scrollYProgress}
-                      layout="desktop"  // ✅ desktop
+                      layout="desktop" // ✅ desktop
                     />
                   ))}
                 </div>
@@ -166,7 +181,6 @@ export default function Experiences() {
             {/* ✅ MOBILE — Fixed structure */}
             {isMobile && (
               <div className="relative w-full max-w-md">
-
                 {/* ✅ Line — alag div */}
                 <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-white/15 rounded">
                   <motion.div
@@ -185,14 +199,12 @@ export default function Experiences() {
                       start={idx === 0 ? 0 : thresholds[idx - 1]}
                       end={thresholds[idx]}
                       scrollYProgress={scrollYProgress}
-                      layout="mobile"  // ✅ mobile
+                      layout="mobile" // ✅ mobile
                     />
                   ))}
                 </div>
-
               </div>
             )}
-
           </div>
         </div>
       </div>
